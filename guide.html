@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How your daily calories are calculated · kcal Calculator</title>
+<meta name="description" content="The formulas behind the kcal calculator: BMR, TDEE, calorie goals and macros, with a worked example.">
+<!-- AdSense: paste the snippet from your AdSense account here -->
+<style>
+:root{--bg:#f1f7f4;--surface:#fff;--text:#1c2b2b;--muted:#5f7472;--brand:#3b8686;--field:#f6faf8;--border:#dde9e4;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1716;--surface:#152221;--text:#e6f2ef;--muted:#93aba6;--brand:#5fc0bf;--field:#0f1b1a;--border:#243735;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:env(safe-area-inset-top,0px) 16px env(safe-area-inset-bottom,0px)}
+.wrap{max-width:760px;margin:0 auto;padding:28px 0 48px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px}
+h1{font-size:1.6rem;margin:0 0 4px;color:var(--brand)}h2{font-size:1.1rem;margin:26px 0 6px}
+p,li{font-size:.97rem}ul{padding-left:20px}a{color:var(--brand)}
+.muted{color:var(--muted);font-size:.9rem}.back{display:inline-block;margin-bottom:16px;text-decoration:none;font-weight:600}
+.box{background:var(--field);border:1px solid var(--border);border-radius:12px;padding:12px 14px;font-size:.92rem}
+.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem}th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border)}
+.foot{text-align:center;color:var(--muted);font-size:.85rem;margin-top:22px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="index.html">← Back to the calculator</a>
+<div class="card">
+<h1>How your daily calories are calculated</h1>
+<p class="muted">The four steps the calculator follows, with a worked example you can check by hand.</p>
+
+<h2>Step 1: BMR, the calories you burn at rest</h2>
+<p>Basal metabolic rate (BMR) is the energy your body uses to breathe, circulate blood, and repair cells. By default the calculator uses the Mifflin-St Jeor equation:</p>
+<ul>
+<li><b>Men:</b> 10 × weight (kg) + 6.25 × height (cm) − 5 × age + 5</li>
+<li><b>Women:</b> 10 × weight (kg) + 6.25 × height (cm) − 5 × age − 161</li>
+</ul>
+<p>If you know your body fat percentage, you can choose Katch-McArdle instead: 370 + 21.6 × lean body mass (kg). It ignores age and sex, so it can suit people whose body composition is far from average.</p>
+<p class="box"><b>Example:</b> a 30-year-old woman, 65 kg, 165 cm: 650 + 1,031 − 150 − 161 = about 1,370 kcal.</p>
+
+<h2>Step 2: TDEE, your maintenance calories</h2>
+<p>Total daily energy expenditure (TDEE) is BMR multiplied by an activity factor:</p>
+<div class="scroll"><table>
+<tr><th>Activity level</th><th>Factor</th></tr>
+<tr><td>Sedentary: little or no exercise</td><td>1.2</td></tr>
+<tr><td>Light: exercise 1 to 3 days a week</td><td>1.375</td></tr>
+<tr><td>Moderate: exercise 3 to 5 days a week</td><td>1.55</td></tr>
+<tr><td>Very active: hard exercise 6 to 7 days a week</td><td>1.725</td></tr>
+<tr><td>Extra active: physical job plus daily training</td><td>1.9</td></tr>
+</table></div>
+<p class="box"><b>Example:</b> 1,370 × 1.55 = about 2,120 kcal to maintain weight.</p>
+
+<h2>Step 3: Your goal</h2>
+<p>About 7,700 kcal is treated as 1 kg of body fat, so a daily gap of 500 kcal is roughly 0.45 kg (1 lb) per week. To lose weight, eat below TDEE. To gain, eat above it. The calculator never goes below 1,200 kcal (women) or 1,500 kcal (men).</p>
+<p class="box"><b>Example:</b> 2,120 − 500 = about 1,620 kcal per day.</p>
+
+<h2>Step 4: Macros</h2>
+<p>Your target is split 25% protein, 50% carbs, and 25% fat. Protein and carbs provide 4 kcal per gram and fat provides 9 kcal per gram.</p>
+<p class="box"><b>Example:</b> at 1,620 kcal that is about 101 g protein, 203 g carbs, and 45 g fat.</p>
+
+<h2>Making the result useful</h2>
+<ul>
+<li>Treat the number as a starting point, not a prescription.</li>
+<li>Weigh yourself under similar conditions for 2 to 3 weeks, then adjust your intake by 100 to 200 kcal if progress is off track.</li>
+<li>Choose a pace you can keep. A smaller gap is easier to stick to.</li>
+</ul>
+<p class="box">These are general estimates for adults aged 18 and over, not medical advice. Speak to a doctor or dietitian first if you are pregnant, have a medical condition, take medication that affects weight, or have a history of an eating disorder.</p>
+</div>
+<p class="foot"><a href="guide.html">Guide</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="privacy.html">Privacy policy</a></p>
+</div>
+</body>
+</html>
